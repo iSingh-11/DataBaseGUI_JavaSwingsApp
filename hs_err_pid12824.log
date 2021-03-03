@@ -1,0 +1,203 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x0000000081400000 to 0x0000000089400000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3301), pid=12824, tid=23880
+#
+# JRE version:  (13.0.1+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 test.DBLoginFetchingOperations
+
+Host: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.546)
+Time: Sat Oct 31 23:01:46 2020 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002db956b8000):  JavaThread "Unknown thread" [_thread_in_vm, id=23880, stack(0x000000f840a00000,0x000000f840b00000)]
+
+Stack: [0x000000f840a00000,0x000000f840b00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x626eca]
+V  [jvm.dll+0x772c6a]
+V  [jvm.dll+0x77441f]
+V  [jvm.dll+0x774a23]
+V  [jvm.dll+0x24da58]
+V  [jvm.dll+0x62438a]
+V  [jvm.dll+0x618f75]
+V  [jvm.dll+0x30c61c]
+V  [jvm.dll+0x30c452]
+V  [jvm.dll+0x311bc6]
+V  [jvm.dll+0x355ce6]
+V  [jvm.dll+0x3554c0]
+V  [jvm.dll+0x2e729a]
+V  [jvm.dll+0x2e8532]
+V  [jvm.dll+0x74fcd8]
+V  [jvm.dll+0x363739]
+V  [jvm.dll+0x732dc5]
+V  [jvm.dll+0x3ce2ef]
+V  [jvm.dll+0x3d0611]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x214c2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x4cec1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fffe28646b8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000002db956fd000 GCTaskThread "GC Thread#0" [stack: 0x000000f840b00000,0x000000f840c00000] [id=16060]
+  0x000002db9570e800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000f840c00000,0x000000f840d00000] [id=18512]
+  0x000002db95711000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000f840d00000,0x000000f840e00000] [id=12224]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fffe2096f67]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002db956b4c90] Heap_lock - owner thread: 0x000002db956b8000
+
+Heap address: 0x0000000081400000, size: 2028 MB, Compressed Oops mode: Non-zero based: 0x0000000081400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.009 Loaded shared library C:\Program Files\Java\jdk-13.0.1\bin\zip.dll
+Event: 0.009 Loaded shared library C:\Program Files\Java\jdk-13.0.1\bin\jimage.dll
+Event: 0.010 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.010 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.011 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.011 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.011 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.011 Loading shared library C:\Program Files\Java\jdk-13.0.1\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff60ee50000 - 0x00007ff60ee5f000 	C:\Program Files\Java\jdk-13.0.1\bin\javaw.exe
+0x00007ff81e510000 - 0x00007ff81e706000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff81e3b0000 - 0x00007ff81e46d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff81c090000 - 0x00007ff81c358000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff81bcb0000 - 0x00007ff81bdb0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff816ce0000 - 0x00007ff816cf5000 	C:\Program Files\Java\jdk-13.0.1\bin\VCRUNTIME140.dll
+0x00007ff816cc0000 - 0x00007ff816cd8000 	C:\Program Files\Java\jdk-13.0.1\bin\jli.dll
+0x00007ff81d0b0000 - 0x00007ff81d15c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff81d160000 - 0x00007ff81d1fe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff81d210000 - 0x00007ff81d2ab000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff81e190000 - 0x00007ff81e2b3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff81db80000 - 0x00007ff81dd20000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff81c360000 - 0x00007ff81c382000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff801500000 - 0x00007ff80179b000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.488_none_ca04af081b815d21\COMCTL32.dll
+0x00007ff81cdc0000 - 0x00007ff81cdea000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff81be00000 - 0x00007ff81bf09000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff81bf40000 - 0x00007ff81bfdd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff814370000 - 0x00007ff81437a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff81cb70000 - 0x00007ff81cba0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8067d0000 - 0x00007ff80686b000 	C:\Program Files\Java\jdk-13.0.1\bin\msvcp140.dll
+0x00007fffe1da0000 - 0x00007fffe2906000 	C:\Program Files\Java\jdk-13.0.1\bin\server\jvm.dll
+0x00007ff81cba0000 - 0x00007ff81cba8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff809ce0000 - 0x00007ff809ce9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff80b680000 - 0x00007ff80b6a7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff81caa0000 - 0x00007ff81cb0b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff81a870000 - 0x00007ff81a882000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff816d60000 - 0x00007ff816d70000 	C:\Program Files\Java\jdk-13.0.1\bin\verify.dll
+0x00007ff81a290000 - 0x00007ff81a474000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff8090f0000 - 0x00007ff80911c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff81c390000 - 0x00007ff81c40f000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff816d30000 - 0x00007ff816d56000 	C:\Program Files\Java\jdk-13.0.1\bin\java.dll
+0x00007ff816270000 - 0x00007ff816287000 	C:\Program Files\Java\jdk-13.0.1\bin\zip.dll
+0x00007ff816d20000 - 0x00007ff816d2a000 	C:\Program Files\Java\jdk-13.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-13.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.488_none_ca04af081b815d21;C:\Program Files\Java\jdk-13.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: test.DBLoginFetchingOperations
+java_class_path (initial): C:\Users\hp\eclipseEE\test;C:\Users\hp\Downloads\mysql-connector-java-8.0.21.jar;C:\Users\hp\eclipseEE\test\miglayout15-swing.jar;C:\Users\hp\Downloads\ojdbc6.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2126512128                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2126512128                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk-13.0.1/bin/server;C:/Program Files/Java/jdk-13.0.1/bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\PuTTY\;C:\WINDOWS\System32\OpenSSH\;%JAVA_HOME%\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-13.0.1\bin;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Users\hp\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;C:\WINDOWS\system32;
+USERNAME=hp
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.546)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8108M (2096M free)
+TotalPageFile size 32666M (AvailPageFile size 51M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 60M, peak: 188M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9) for windows-amd64 JRE (13.0.1+9), built on Oct  6 2019 12:37:49 by "mach5one" with unknown MS VC++:1916
+
+END.
